@@ -1,0 +1,534 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+@font-face {
+  font-family: 'CocogooseLetterpress';
+  src: url('fonts/COCOGOOSELETTERPRESS TRIAL.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  scroll-behavior:smooth;
+}
+body {
+    background: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.8s ease-in-out;
+}
+
+/* ==========================
+   First Page (Hero Section)
+========================== */
+.first {
+ 
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
+  color: #fff;
+  z-index: -2;
+  background: linear-gradient(-45deg, #0788D9, #07B0F2, #05DBF2, #080D05);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+.first::after {
+  content: '';
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  background: rgba(89, 0, 253, 0.11); /* overlay for readability */
+  z-index: 0;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.firstpage {
+  position:absolute;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 0.5fr 1fr 1fr;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  color: #000000;
+  word-wrap: break-word;
+}
+
+.titleFirst{
+  grid-row-start:2 ;
+  grid-row-end: 3 ;
+  grid-column-start:1 ;
+  grid-column-end:2 ;
+
+
+}
+
+.cadFirst{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-column-start:3 ;
+  grid-column-end:4 ;
+  grid-row-start:2 ;
+  grid-row-end: 3 ;
+}
+.cadFirst h4{
+  grid-row-start:2 ;
+}
+
+/* Typography */
+.firstpage h1 {
+  font-family: 'CocogooseLetterpress', sans-serif;
+}
+.firstpage h4 {
+  font-family: 'Merriweather', serif;
+
+}
+@media (max-width: 768px) {
+  .titleFirst {
+    color: #ffffff;
+    background: #3333331a;
+    border-radius: 10px;
+    padding: 10px;
+    grid-column-start:1 ;
+    grid-column-end:2 ;
+    margin-right: 2rem;
+  }
+  .clioFirst img {
+    display: block;
+    margin-left: 8rem;   /* pushes it to the right */
+    margin-right: 0;     /* makes sure it sticks to the right */
+    max-width: 90%;      /* optional: shrink image on small screens */
+  }
+    .clioFirst {
+    padding: 2rem;
+    text-align: right; /* ensures image aligns right */
+  }
+}
+
+
+/* Blue overlay behind content */
+.aboutpage {
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: background 0.8s ease-in-out;
+
+  /* Effet de profondeur */
+  background: #ffffff; /* Fond blanc ou très clair */
+  border-radius: 20px; /* coins arrondis pour l'effet carte */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* ombre portée */
+  margin: -100px auto 50px auto; /* remonte légèrement sur la section précédente */
+  max-width: 1200px; /* limite la largeur pour mieux ressortir */
+  position: relative;
+  z-index: 2;
+}
+
+.aboutpage h1 {
+  font-family: 'CocogooseLetterpress', sans-serif;
+  color: #000000;
+}
+
+.aboutpage p {
+  font-family: 'Merriweather', serif;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+}
+
+.about-card {
+
+  border-radius: 15px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.about-card h3 {
+  font-family: 'CocogooseLetterpress', sans-serif;
+  color: #000000;
+  margin: 20px 0 15px 0;
+}
+
+.about-card p {
+  font-family: 'Merriweather', serif;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.about-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .aboutpage .row {
+    flex-direction: column;
+  }
+
+  .about-card {
+    margin-bottom: 20px;
+  }
+}
+
+
+
+
+/* ==========================
+   Third Page (Services Cards)
+========================== */
+.service{
+    background-image: url('./svg/repair-1-1024x683.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.servicespage {
+
+  min-height: 100vh;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f5f7facc, #e4ebf5a6);
+}
+
+
+.servicespage h1 {
+  font-family: 'CocogooseLetterpress', sans-serif;
+  color: #000000;
+}
+
+.servicespage p {
+  font-family: 'Merriweather', serif;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.95); /* léger effet glass */
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15); /* plus profond */
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+
+.service-card h3 {
+  font-family: 'CocogooseLetterpress', sans-serif;
+  color: #000000;
+  margin: 15px 0;
+}
+
+.service-card p {
+  font-family: 'Merriweather', serif;
+  color: #555;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.service-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+  transition: transform 0.3s;
+}
+.service-card:hover .service-icon {
+  transform: scale(1.1);
+}
+
+.service-price {
+  font-family: 'Merriweather', sans-serif;
+  font-size: 1.2rem;
+  color: #000000;
+  margin-top: 15px;
+}
+
+.service-card button {
+  width: 100%;
+  max-width: 150px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.service-card button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .servicespage .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+
+
+/* ==========================
+   Fourth Page (Appointment / Form)
+========================== */
+.fourthpage {
+    background: linear-gradient(135deg, #f5f7faf5, #e4ebf5a6);
+  min-height: 100vh;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fourthpage .container {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.phone-input {
+  height: calc(3.5rem + 2px);
+  padding-left: 3.5rem;
+}
+
+.iti__flag-container {
+  top: 0.625rem;
+}
+
+.iti__selected-flag {
+  height: 2.5rem;
+}
+
+/* ==========================
+   Contact Page
+========================== */
+.contactpage {
+    position: relative;
+    color: #fff;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
+  overflow: hidden;
+}
+
+.contact-card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.contact-card h4 {
+    color: #000000;
+  margin-bottom: 15px;
+  font-family: 'Merriweather', serif;
+}
+
+.contact-card p {
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ==========================
+   Responsive Styles
+========================== */
+@media (max-width: 1024px) {
+  .secondpage {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .secondpage .label_brise {
+    max-width: 100%;
+  }
+
+  .bluebg {
+    display: none;
+  }
+
+  .firstpage {
+    width: 80%;
+    padding: 15px;
+  }
+
+  .firstpage h1 {
+    font-size: 1.8rem;
+  }
+
+  .firstpage h4 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .firstpage {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .firstpage h1 {
+    font-size: 1.5rem;
+  }
+
+  .firstpage h4 {
+    font-size: 1rem;
+  }
+
+  .thirdpage .content {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .thirdpage .row.row-cols-md-3 {
+    row-gap: 2rem;
+  }
+
+  .thirdpage .card h4 {
+    font-size: 1.1rem;
+  }
+
+  .thirdpage .card h1 {
+    font-size: 1.3rem;
+  }
+
+  .thirdpage .card ul li {
+    font-size: 0.85rem;
+  }
+
+  .thirdpage .card button {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+}
+.contactpage .stars {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  background: white;
+  box-shadow: 2vw 5vh 2px white, 10vw 8vh 2px white, 15vw 15vh 1px white,
+    22vw 22vh 1px white, 28vw 12vh 2px white, 32vw 32vh 1px white,
+    38vw 18vh 2px white, 42vw 35vh 1px white, 48vw 25vh 2px white,
+    53vw 42vh 1px white, 58vw 15vh 2px white, 63vw 38vh 1px white,
+    68vw 28vh 2px white, 73vw 45vh 1px white, 78vw 32vh 2px white,
+    83vw 48vh 1px white, 88vw 20vh 2px white, 93vw 52vh 1px white,
+    98vw 35vh 2px white, 5vw 60vh 1px white, 12vw 65vh 2px white,
+    18vw 72vh 1px white, 25vw 78vh 2px white, 30vw 85vh 1px white,
+    35vw 68vh 2px white, 40vw 82vh 1px white, 45vw 92vh 2px white,
+    50vw 75vh 1px white, 55vw 88vh 2px white, 60vw 95vh 1px white,
+    65vw 72vh 2px white, 70vw 85vh 1px white, 75vw 78vh 2px white,
+    80vw 92vh 1px white, 85vw 82vh 2px white, 90vw 88vh 1px white,
+    95vw 75vh 2px white;
+  animation: twinkle 8s infinite linear;
+}
+
+.contactpage .shooting-star {
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, white, transparent);
+  animation: shoot 3s infinite ease-in;
+}
+
+.contactpage .shooting-star:nth-child(1) {
+  top: 20%;
+  left: -100px;
+  animation-delay: 0s;
+}
+
+.contactpage .shooting-star:nth-child(2) {
+  top: 35%;
+  left: -100px;
+  animation-delay: 1s;
+}
+
+.contactpage .shooting-star:nth-child(3) {
+  top: 50%;
+  left: -100px;
+  animation-delay: 2s;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes shoot {
+  0% {
+    transform: translateX(0) translateY(0) rotate(25deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(120vw) translateY(50vh) rotate(25deg);
+    opacity: 0;
+  }
+}
+
+/* Additional twinkling stars with different animation timing */
+.contactpage .stars::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background: white;
+  box-shadow: 8vw 12vh 2px white, 16vw 18vh 1px white, 24vw 25vh 2px white,
+    33vw 15vh 1px white, 41vw 28vh 2px white, 49vw 35vh 1px white,
+    57vw 22vh 2px white, 65vw 42vh 1px white, 73vw 28vh 2px white,
+    81vw 48vh 1px white, 89vw 32vh 2px white, 97vw 45vh 1px white,
+    3vw 68vh 2px white, 11vw 75vh 1px white, 19vw 82vh 2px white,
+    27vw 88vh 1px white, 35vw 72vh 2px white, 43vw 85vh 1px white,
+    51vw 92vh 2px white, 59vw 78vh 1px white;
+  animation: twinkle 6s infinite linear reverse;
+}
