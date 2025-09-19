@@ -83,7 +83,10 @@ body {
   grid-row-end: 3 ;
   grid-column-start:1 ;
   grid-column-end:2 ;
-
+      color: #ffffff;
+    background: #333333a1;
+    border-radius: 10px;
+    padding: 10px;
 
 }
 
