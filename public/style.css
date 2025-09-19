@@ -15,11 +15,11 @@
   font-style: normal;
 }
 html {
-	 overflow-x: hidden; 
+   overflow-x: hidden; 
   scroll-behavior:smooth;
 }
 body {
- overflow-x: hidden; 
+   overflow-x: hidden; 
     background: #ffffff;
   margin: 0;
   padding: 0;
@@ -115,7 +115,7 @@ body {
     padding: 10px;
     grid-column-start:1 ;
     grid-column-end:2 ;
-    margin-right: 2rem;
+
   }
   .clioFirst img {
     display: block;
@@ -124,7 +124,7 @@ body {
     max-width: 90%;      /* optional: shrink image on small screens */
   }
     .clioFirst {
-    padding: 2rem;
+
     text-align: right; /* ensures image aligns right */
   }
 }
