@@ -15,9 +15,11 @@
   font-style: normal;
 }
 html {
+	 overflow-x: hidden; 
   scroll-behavior:smooth;
 }
 body {
+ overflow-x: hidden; 
     background: #ffffff;
   margin: 0;
   padding: 0;
