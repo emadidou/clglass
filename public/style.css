@@ -119,6 +119,20 @@ body {
   height: 100%;
   border-radius: 8px; /* optional, for nicer look */
 }
+#carouselModal .carousel-control-prev-icon,
+#carouselModal .carousel-control-next-icon {
+    background-color: rgb(16, 211, 65); /* button background */
+    border-radius: 50%;    /* optional: make them circular */
+    width: 40px;           /* optional: size */
+    height: 40px;          /* optional: size */
+    background-size: 100%, 100%;
+}
+
+/* Optional: make the arrow icon visible if using custom color */
+#carouselModal .carousel-control-prev-icon::after,
+#carouselModal .carousel-control-next-icon::after {
+    display: none; /* hide default arrow if needed */
+}
 
 @media (max-width: 768px) {
   .titleFirst {
