@@ -17,6 +17,7 @@
 html {
    overflow-x: hidden; 
   scroll-behavior:smooth;
+  max-width: 100%;
 }
 body {
   
@@ -25,6 +26,7 @@ body {
   padding: 0;
   font-family: 'Poppins', sans-serif;
   transition: background 0.8s ease-in-out;
+  max-width: 100%;
 }
 
 /* ==========================
@@ -134,7 +136,19 @@ body {
 #carouselModal .carousel-control-next-icon::after {
     display: none; /* hide default arrow if needed */
 }
+.clioFirst {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 80%;   /* desktop size */
 
+}
+.clioFirst img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 @media (max-width: 768px) {
   .titleFirst {
     color: #ffffff;
@@ -145,15 +159,7 @@ body {
     grid-column-end:2 ;
 
   }
-  .clioFirst img {
-    display: block;  /* pushes it to the right */
-    margin-left: 8rem;    /* makes sure it sticks to the right */
-    max-width: 80%;      /* optional: shrink image on small screens */
-  }
-    .clioFirst {
 
-    text-align: right; /* ensures image aligns right */
-  }
 }
 
 
@@ -171,7 +177,7 @@ body {
   background: #ffffff; /* Fond blanc ou très clair */
   border-radius: 20px; /* coins arrondis pour l'effet carte */
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* ombre portée */
-  margin: -30px auto 50px auto; /* remonte légèrement sur la section précédente */
+  margin: -10px auto 50px auto; /* remonte légèrement sur la section précédente */
   max-width: 1200px; /* limite la largeur pour mieux ressortir */
   position: relative;
   z-index: 2;
@@ -562,13 +568,7 @@ body {
   animation: twinkle 6s infinite linear reverse;
 }
 /* Car image on the right */
-.clioFirst {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 
-}
 
 /* Centered gifts at bottom */
 .gift-center {
@@ -584,4 +584,24 @@ body {
 
 .gift-center img {
   max-height: 100px; /* resize gifts */
+}
+
+@media (max-width: 768px) {
+  .clioFirst {
+    position: relative;
+    top: auto;
+    transform: none;
+    max-width: 80%;   /* smaller car on phones */
+    margin: 0 auto;   /* center it */
+  }
+
+  .gift-center {
+    flex-wrap: wrap;  /* wrap images on small screens */
+    gap: 10px;
+    bottom: 10px;
+  }
+
+  .gift-center img {
+    max-height: 70px; /* smaller gifts */
+  }
 }
