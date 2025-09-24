@@ -567,17 +567,13 @@ body {
     51vw 92vh 2px white, 59vw 78vh 1px white;
   animation: twinkle 6s infinite linear reverse;
 }
-/* Car image on the right */
-
-
-/* Centered gifts at bottom */
 .gift-center {
   position: absolute;
   bottom: 4rem; /* distance from bottom */
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 20px; /* spacing between images */
+   /* spacing between images */
   justify-content: center;
   align-items: center;
 }
@@ -591,17 +587,18 @@ body {
     position: relative;
     top: auto;
     transform: none;
-    max-width: 80%;   /* smaller car on phones */
-    margin: 0 auto;   /* center it */
+    max-width: 80%;
+    margin: 0 auto;
   }
 
   .gift-center {
-    flex-wrap: wrap;  /* wrap images on small screens */
-    gap: 10px;
+    flex-wrap: wrap;
     bottom: 10px;
+    gap: 5px; /* reduce row spacing */
   }
 
   .gift-center img {
-    max-height: 70px; /* smaller gifts */
+    max-height: 70px;
+    margin: 2px; /* optional: reduce extra spacing */
   }
 }
