@@ -33,7 +33,7 @@ body {
 .first {
  
   position: relative;
-  min-height: 90vh;
+  min-height: 110vh;
   display: flex;
   justify-content:flex-end;
   align-items: center;
@@ -43,6 +43,7 @@ body {
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 	height: 100vh;
+  
 }
 
 .first::after {
@@ -145,10 +146,9 @@ body {
 
   }
   .clioFirst img {
-    display: block;
-    margin-left: 8rem;   /* pushes it to the right */
-    margin-right: 0;     /* makes sure it sticks to the right */
-    max-width: 90%;      /* optional: shrink image on small screens */
+    display: block;  /* pushes it to the right */
+    margin-left: 8rem;    /* makes sure it sticks to the right */
+    max-width: 80%;      /* optional: shrink image on small screens */
   }
     .clioFirst {
 
@@ -171,7 +171,7 @@ body {
   background: #ffffff; /* Fond blanc ou très clair */
   border-radius: 20px; /* coins arrondis pour l'effet carte */
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* ombre portée */
-  margin: -100px auto 50px auto; /* remonte légèrement sur la section précédente */
+  margin: -30px auto 50px auto; /* remonte légèrement sur la section précédente */
   max-width: 1200px; /* limite la largeur pour mieux ressortir */
   position: relative;
   z-index: 2;
@@ -560,4 +560,28 @@ body {
     27vw 88vh 1px white, 35vw 72vh 2px white, 43vw 85vh 1px white,
     51vw 92vh 2px white, 59vw 78vh 1px white;
   animation: twinkle 6s infinite linear reverse;
+}
+/* Car image on the right */
+.clioFirst {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+}
+
+/* Centered gifts at bottom */
+.gift-center {
+  position: absolute;
+  bottom: 4rem; /* distance from bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px; /* spacing between images */
+  justify-content: center;
+  align-items: center;
+}
+
+.gift-center img {
+  max-height: 100px; /* resize gifts */
 }
