@@ -35,7 +35,7 @@ body {
 .first {
  
   position: relative;
-  min-height: 110vh;
+  min-height: 90vh;
   display: flex;
   justify-content:flex-end;
   align-items: center;
@@ -44,7 +44,6 @@ body {
   background: linear-gradient(-45deg, #0788D9, #07B0F2, #05DBF2, #080D05);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
-	height: 100vh;
   
 }
 
@@ -138,14 +137,16 @@ body {
 }
 .clioFirst {
   position: absolute;
-  right: 0;
+  left: 40%;
+  
   top: 50%;
   transform: translateY(-50%);
-  max-width: 80%;   /* desktop size */
+  max-width: 60%;   /* desktop size */
 
 }
 .clioFirst img {
-  width: 100%;
+  width: 75%;
+  margin-bottom: 5rem;
   height: auto;
   display: block;
 }
@@ -583,17 +584,22 @@ body {
 }
 
 @media (max-width: 768px) {
+  .first{
+
+  }
   .clioFirst {
     position: relative;
     top: -10%;
     transform: none;
     max-width: 80%;
     margin: 0 auto;
+    left: 25%;
+
   }
 
   .gift-center {
     flex-wrap:nowrap;
-    bottom: 10rem;
+    bottom: 5rem;
     
   }
 
