@@ -585,20 +585,20 @@ body {
 @media (max-width: 768px) {
   .clioFirst {
     position: relative;
-    top: auto;
+    top: -10%;
     transform: none;
     max-width: 80%;
     margin: 0 auto;
   }
 
   .gift-center {
-    flex-wrap: wrap;
-    bottom: 10px;
-    gap: 5px; /* reduce row spacing */
+    flex-wrap:nowrap;
+    bottom: 10rem;
+    
   }
 
   .gift-center img {
-    max-height: 70px;
-    margin: 2px; /* optional: reduce extra spacing */
+    max-height: 5rem;
+    
   }
 }
